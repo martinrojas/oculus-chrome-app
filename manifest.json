@@ -1,15 +1,17 @@
 {
-  "manifest_version": 1,
-  "name": "Oculus Experience",
-  "version": "0.1",
-  "minimum_chrome_version": "23",
-  "icons": {
-    "16": "icon_16.png",
-    "128": "icon_128.png"
-  },
-  "app": {
-    "background": {
-      "scripts": ["main.js"]
+    "manifest_version": 1,
+    "name": "Oculus Experience",
+    "version": "0.1",
+    "permissions": ["system.display"],
+    "minimum_chrome_version": "34",
+    "manifest_version": 2,
+    "icons": {
+        "16": "icon_16.png",
+        "128": "icon_128.png"
+    },
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
     }
-  }
 }
