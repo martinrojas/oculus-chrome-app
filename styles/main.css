@@ -1,11 +1,12 @@
 html, body {
     height: 100%;
+    
 }
 
 body {
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: -webkit-radial-gradient(center, ellipse cover,#FFFFFF 0%,#FAFAFA 50%,#F5F5F5 60%,#BEBEBE 100%);
+    background-color: #19b1e7;
     margin: 0;
     padding: 0;
 }
@@ -18,33 +19,6 @@ h1 {
     font-family: Arial, sans-serif;
     color: rgb(66,66,66);
     letter-spacing: -0.05em;
-}
-
-#info{
-    display: none;
-    padding:10px;
-    color:#fff;
-    position:absolute;
-    background-color:rgba(0,0,0,0.4);
-}
-
-#help-text H1 {
-    font-size:18px;
-    margin-top:15px;
-
-}
-
-#help-text DIV{
-    margin-bottom:5px;
-}
-
-#help-text DIV LABEL{
-    display:inline-block;
-    width:160px;
-}
-
-#help-text SECTION {
-    margin-top:20px;
 }
 
 #generic_error,

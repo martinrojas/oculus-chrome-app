@@ -148,20 +148,11 @@ function initGeometry(){
 
 function init(){
 
-  document.addEventListener('keydown', onKeyDown, false);
-  document.addEventListener('keyup', onKeyUp, false);
-  document.addEventListener('mousedown', onMouseDown, false);
-  document.addEventListener('mousemove', onMouseMove, false);
+//  document.addEventListener('keydown', onKeyDown, false);
+//  document.addEventListener('keyup', onKeyUp, false);
+//  document.addEventListener('mousedown', onMouseDown, false);
+//  document.addEventListener('mousemove', onMouseMove, false);
 
-  document.getElementById("toggle-render").addEventListener("click", function(){
-    useRift = !useRift;
-    onResize();
-  });
-
-  document.getElementById("help").addEventListener("click", function(){
-    var el = document.getElementById("help-text");
-    el.style.display = (el.style.display == "none") ? "" : "none";
-  });
 
   window.addEventListener('resize', onResize, false);
 
@@ -204,7 +195,8 @@ function onResize() {
 
 
 function bridgeConnected(){
-  document.getElementById("logo").className = "";
+//  document.getElementById("logo").className = "";
+    chrome.runtime.sendMessage({status: "active"});
 }
 
 function bridgeDisconnected(){

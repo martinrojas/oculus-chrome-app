@@ -8,11 +8,11 @@ chrome.app.runtime.onLaunched.addListener(function() {
   // Center window on screen.
   var screenWidth = screen.availWidth;
   var screenHeight = screen.availHeight;
-  var width = 800;
-  var height = 300;
+  var width = 600;
+  var height = 400;
 
   chrome.app.window.create('index.html', {
-    id: "oculusExpID",
+    id: "RZRrift",
     bounds: {
       width: width,
       height: height,
