@@ -11,7 +11,7 @@ chrome.app.runtime.onLaunched.addListener(function() {
   var width = 800;
   var height = 300;
 
-  chrome.app.window.create('oculus.html', {
+  chrome.app.window.create('index.html', {
     id: "oculusExpID",
     bounds: {
       width: width,

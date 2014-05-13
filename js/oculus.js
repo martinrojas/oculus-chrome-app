@@ -7,7 +7,7 @@ var mouse, time;
 var controls;
 var clock;
 
-var useRift = false;
+var useRift = true;
 
 var riftCam;
 

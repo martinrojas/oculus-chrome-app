@@ -21,6 +21,7 @@ h1 {
 }
 
 #info{
+    display: none;
     padding:10px;
     color:#fff;
     position:absolute;
