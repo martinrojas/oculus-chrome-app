@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>System Information</title>
-<script src="js/main.js"></script>
-<link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-<h2>Display Information</h2>
-<div id="display-list">
-   <i> Loading ...</i>
-</div>
-</body>
+    <head>
+        <title>System Information</title>
+        <script src="js/main.js"></script>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <h2>Display Information</h2>
+        <div id="display-list">
+            <i> Loading ...</i>
+        </div>
+        <div id="security_error">
+            <p>This file must be served via HTTP to support the use of textures.</p>
+            <p>Please host this content via a web server of some kind and try again.</p>
+        </div>
+        <div id="generic_error">
+            <p>Oh dang, something went wrong while trying to render the scene.</p>
+            <p>Exception: <span id="exception_message"></span></p>
+        </div>
+    </body>
 </html>
