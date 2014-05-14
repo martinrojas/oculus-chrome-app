@@ -41,7 +41,7 @@ function getDisplayInfo() {
     systemInfo.display.getInfo(function(displays) {            
         for (var i = 0; i < displays.length; i++) {
             if(displays[i].isPrimary == false){
-                chrome.app.window.create("oculus.html", {
+                chrome.app.window.create("dynamic.html", {
                     id: "Oculus",
                     alwaysOnTop: true,
                     bounds: displays[i].bounds,

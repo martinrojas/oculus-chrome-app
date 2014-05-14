@@ -10,6 +10,7 @@ var clock;
 var useRift = true;
 
 var riftCam;
+var oculusBridge;
 
 var boxes = [];
 var core = [];
@@ -23,7 +24,7 @@ var bodyPosition;
 var viewAngle;
 
 var velocity;
-var oculusBridge;
+
 
 // Map for key states
 var keys = [];
