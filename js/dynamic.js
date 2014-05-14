@@ -25,13 +25,9 @@ var bodyPosition;
 var viewAngle;
 
 
-var textureCounter = 0;
-
-var animDelta = 0, animDeltaDir = -1;
-var lightVal = 1, lightDir = 1;
+var textureCounter = 0, animDelta = 0, animDeltaDir = -1, lightVal = 1, lightDir = 1;
 
 var clock;
-
 var morph, morphs = [];
 
 var updateNoise = true;
@@ -60,7 +56,7 @@ function init() {
 
     camera = new THREE.PerspectiveCamera( 40, SCREEN_WIDTH / SCREEN_HEIGHT, 2, 4000 );
     camera.useQuaternion = true;
-    camera.position.set( 0, 500, 1200 );
+    camera.position.set( 0, 400, 800 );
 
 //    sceneRenderTarget.add( cameraOrtho );
     controls = new THREE.OrbitControls(cameraOrtho);
@@ -83,17 +79,17 @@ function init() {
     // SCENE (FINAL)
 
     scene = new THREE.Scene();
-    scene.fog = new THREE.Fog( 0x050505, 2000, 4000 );
+    scene.fog = new THREE.Fog( 0xFF6600, 2000, 4000 );
 
     // LIGHTS
 
-    scene.add( new THREE.AmbientLight( 0x111111 ) );
+    scene.add( new THREE.AmbientLight( 0xFFFFFF ) );
 
-    directionalLight = new THREE.DirectionalLight( 0xffffff, 1.15 );
+    directionalLight = new THREE.DirectionalLight( 0xffffff, 8 );
     directionalLight.position.set( 500, 2000, 0 );
     scene.add( directionalLight );
 
-    pointLight = new THREE.PointLight( 0xff4400, 1.5 );
+    pointLight = new THREE.PointLight( 0xff4400, 4 );
     pointLight.position.set( 0, 0, 0 );
     scene.add( pointLight );
 
@@ -345,6 +341,18 @@ function init() {
     riftCam = new THREE.OculusRiftEffect(renderer);
 
     onWindowResize();
+    
+    chrome.runtime.onMessage.addListener(
+        function(request, sender, sendResponse) {
+            if (request.action == "light"){
+                lightDir *= -1;
+            }
+            if (request.action == "dynamic"){
+                animDeltaDir *= -1;
+            }
+
+
+        });
 
 }
 

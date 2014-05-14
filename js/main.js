@@ -11,9 +11,10 @@ function init() {
             if (request.status == "offline"){
                 console.log(request.status)
             }
-            
-            
         });
+    $('button').on('click',function(){
+        chrome.runtime.sendMessage({action: $(this).data('action')});
+    });
 }
 
 
@@ -50,8 +51,7 @@ function getDisplayInfo() {
                 chrome.app.window.create("dynamic.html", {
                     id: "Oculus",
                     alwaysOnTop: true,
-                    bounds: displays[i].bounds,
-                    state: "fullscreen"
+                    bounds: displays[i].bounds
                 });
             }
         }
@@ -60,10 +60,13 @@ function getDisplayInfo() {
 }
 
 
+//,
+//                    state: "fullscreen"
 
 
+function clicked(event){
 
-
+}
 
 
 
