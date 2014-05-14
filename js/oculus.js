@@ -194,14 +194,12 @@ function onResize() {
   }
 }
 
-
 function bridgeConnected(){
-//  document.getElementById("logo").className = "";
-    chrome.runtime.sendMessage({status: "active"});
+    chrome.runtime.sendMessage({status: "online"});
 }
 
 function bridgeDisconnected(){
-  document.getElementById("logo").className = "offline";
+    chrome.runtime.sendMessage({status: "offline"});
 }
 
 function bridgeConfigUpdated(config){

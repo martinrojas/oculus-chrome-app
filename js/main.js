@@ -5,8 +5,14 @@ function init() {
 
     chrome.runtime.onMessage.addListener(
         function(request, sender, sendResponse) {
-            if (request.status == "active")
+            if (request.status == "online"){
                 console.log(request.status)
+            }
+            if (request.status == "offline"){
+                console.log(request.status)
+            }
+            
+            
         });
 }
 
