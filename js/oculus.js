@@ -10,6 +10,7 @@ var clock;
 var useRift = true;
 
 var riftCam;
+var oculusBridge;
 
 var boxes = [];
 var core = [];
@@ -23,7 +24,7 @@ var bodyPosition;
 var viewAngle;
 
 var velocity;
-var oculusBridge;
+
 
 // Map for key states
 var keys = [];
@@ -193,14 +194,12 @@ function onResize() {
   }
 }
 
-
 function bridgeConnected(){
-//  document.getElementById("logo").className = "";
-    chrome.runtime.sendMessage({status: "active"});
+    chrome.runtime.sendMessage({status: "online"});
 }
 
 function bridgeDisconnected(){
-  document.getElementById("logo").className = "offline";
+    chrome.runtime.sendMessage({status: "offline"});
 }
 
 function bridgeConfigUpdated(config){

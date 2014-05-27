@@ -14,10 +14,16 @@
             </div>
             <div id="loading" class="jumbotron">
                 <h1>Experience is Loading</h1>
-                <p class="lead">
-                    RZRrift Experience is loading. 
-                </p>
+                <div class="btn-group btn-group-lg">
+                    <button type="button" class="btn btn-lg btn-success" data-action="light">
+                        Light
+                    </button>
+                    <button type="button" class="btn btn-lg btn-success" data-action="dynamic">
+                        Dynamic
+                    </button>
+                </div>
             </div>
+
         </div>
 
         <pre id="security_error">
@@ -28,7 +34,8 @@
             <p>Oh dang, something went wrong while trying to render the scene.</p>
             <p>Exception: <span id="exception_message"></span></p>
         </pre>
-
+        <script src="js/libs/jquery-2.1.1.min.js"></script>
         <script src="js/main.js"></script>
+        
     </body>
 </html>
