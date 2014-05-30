@@ -1,10 +1,13 @@
 {
-    "manifest_version": 1,
-    "name": "Oculus Experience",
-    "version": "0.1",
-    "permissions": ["system.display"],
-    "minimum_chrome_version": "34",
     "manifest_version": 2,
+    "name": "RZRrift Experience",
+    "version": "1.0",
+    "author": "Martin Rojas",
+    "minimum_chrome_version": "34",
+    "description": "WebGL and Oculus Rift experience",
+    "permissions": ["system.display",
+                    "http://fonts.googleapis.com/",
+                    "https://fonts.googleapis.com/"],
     "icons": {
         "16": "icon_16.png",
         "128": "icon_128.png"

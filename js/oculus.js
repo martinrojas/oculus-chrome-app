@@ -10,6 +10,7 @@ var clock;
 var useRift = true;
 
 var riftCam;
+var oculusBridge;
 
 var boxes = [];
 var core = [];
@@ -23,7 +24,7 @@ var bodyPosition;
 var viewAngle;
 
 var velocity;
-var oculusBridge;
+
 
 // Map for key states
 var keys = [];
@@ -148,20 +149,11 @@ function initGeometry(){
 
 function init(){
 
-  document.addEventListener('keydown', onKeyDown, false);
-  document.addEventListener('keyup', onKeyUp, false);
-  document.addEventListener('mousedown', onMouseDown, false);
-  document.addEventListener('mousemove', onMouseMove, false);
+//  document.addEventListener('keydown', onKeyDown, false);
+//  document.addEventListener('keyup', onKeyUp, false);
+//  document.addEventListener('mousedown', onMouseDown, false);
+//  document.addEventListener('mousemove', onMouseMove, false);
 
-  document.getElementById("toggle-render").addEventListener("click", function(){
-    useRift = !useRift;
-    onResize();
-  });
-
-  document.getElementById("help").addEventListener("click", function(){
-    var el = document.getElementById("help-text");
-    el.style.display = (el.style.display == "none") ? "" : "none";
-  });
 
   window.addEventListener('resize', onResize, false);
 
@@ -202,13 +194,12 @@ function onResize() {
   }
 }
 
-
 function bridgeConnected(){
-  document.getElementById("logo").className = "";
+    chrome.runtime.sendMessage({status: "online"});
 }
 
 function bridgeDisconnected(){
-  document.getElementById("logo").className = "offline";
+    chrome.runtime.sendMessage({status: "offline"});
 }
 
 function bridgeConfigUpdated(config){
