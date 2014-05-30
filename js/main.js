@@ -1,7 +1,7 @@
 var systemInfo = chrome.system;
 
 function init() {
-    checkSocket();
+    checkSocket(); 
 
     chrome.runtime.onMessage.addListener(
         function(request, sender, sendResponse) {
@@ -11,7 +11,7 @@ function init() {
             if (request.status == "offline"){
                 console.log(request.status)
             }
-        });
+        }); 
     $('button').on('click',function(){
         chrome.runtime.sendMessage({action: $(this).data('action')});
     });

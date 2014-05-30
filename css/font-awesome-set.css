@@ -1,0 +1,132 @@
+/*
+Icon list
+=========================== */
+ul.the-icons {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    float:none;
+	
+}
+
+.icon-square,
+.icon-rounded,
+.icon-circled,
+.icon-bordered,
+.icon-square.icon-32,
+.icon-rounded.icon-32,
+.icon-circled.icon-32,
+.icon-bordered.icon-32{
+    margin: 10px 10px 10px 0;
+    display: inline-block !important;
+    text-align: center !important;
+	color:#1b2838;
+	background-color:#fff;
+    width: 28px;
+    height: 28px;
+	padding:5px;
+    font-size: 12px;
+    line-height: 18px;
+    text-shadow:none;
+    cursor: pointer;
+}
+
+.icon-circled,
+.icon-bordered{
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+}
+
+.icon-rounded, 
+.icon-rounded.icon-32{
+	color:#1b2838;
+	background-color:#fff;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.icon-rounded.icon-128{
+	background:none;
+	color:#1b2838;
+	background-color:#fff;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.icon-rounded.icon-64{
+	background:none;
+	color:#1b2838;
+	background-color:#fff;
+	line-height:46px;	
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.icon-bordered,
+.icon-bordered.icon-32{
+	background:none;
+	border:1px solid #fff;
+	color:#fff;
+	padding:4px 5px 5px 5px;
+}
+
+.icon-bordered.icon-64{
+	border:4px solid #fff;
+	padding:5px 5px 5px 5px;	
+}
+
+.icon-bordered.icon-128{
+	border:8px solid #fff;
+	padding:15px 5px 5px 5px;	
+}
+
+.icon-16 {
+    font-size: 16px;
+    line-height: 16px;
+}
+.icon-24{
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.icon-32{
+	padding:0;
+    width: 32px;
+    height: 32px;
+	font-size:32px;
+	line-height:46px;
+}
+
+.icon-64{
+	padding:10px;
+    width: 64px;
+    height: 64px;
+	font-size:32px;
+	line-height:46px;
+}
+
+.icon-128{
+	padding:20px;
+    width: 103px;
+    height: 103px;
+	font-size:52px;
+	line-height:58px;
+}
+
+.icon-left{
+	float:left;
+	margin:0 20px 10px 0;
+}
+
+.icon-right{
+	float:right;
+	margin:0 0 10px 20px;
+}
