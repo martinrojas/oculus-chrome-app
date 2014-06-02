@@ -120,3 +120,7 @@ Secondary color
 .primary-bg .tabbable.style2 .tabber li.active a:active{
 	border-color:#f9bb3d;
 }
+
+#rzr {
+    width: 61%;
+}
